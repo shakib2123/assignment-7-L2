@@ -59,9 +59,13 @@ VALUES
 
 
 
--- Insert a new student record into the "students" table
+-- Query 1: Insert a new student record into the "students" table
 INSERT INTO students(student_name,age,email,frontend_mark,backend_mark,status) 
 VALUES
 ('Shakib', 17, 'shakib@gmail.com', 55, 60, NULL);
 
-SELECT * FROM students;
+-- Query 2: Retrieve the names of all students who are enrolled in the course titled 'Next.js'.
+SELECT students.student_name FROM students
+JOIN enrollment ON students.student_id = enrollment.student_id
+JOIN courses ON enrollment.course_id = courses.course_id
+WHERE courses.course_name = 'Next.js';
