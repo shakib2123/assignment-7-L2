@@ -57,3 +57,11 @@ VALUES
 (2,1),
 (3,2);
 
+
+
+-- Insert a new student record into the "students" table
+INSERT INTO students(student_name,age,email,frontend_mark,backend_mark,status) 
+VALUES
+('Shakib', 17, 'shakib@gmail.com', 55, 60, NULL);
+
+SELECT * FROM students;
