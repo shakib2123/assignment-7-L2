@@ -76,3 +76,7 @@ UPDATE students
 SET status = 'Awarded'
 WHERE (frontend_mark + backend_mark) = (SELECT MAX(frontend_mark + backend_mark) FROM students);
 
+-- Query 4: Delete all courses that have no students enrolled.
+DELETE FROM courses
+WHERE course_id NOT IN (SELECT course_id FROM enrollment);
+
