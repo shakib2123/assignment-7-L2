@@ -32,3 +32,12 @@ CREATE TABLE courses(
 );
 
 
+-- Insert data into the "courses" table
+INSERT INTO courses(course_name,credits)
+VALUES
+('Next.js', 3),
+('React.js', 4),
+('Databases', 3),
+('Prisma', 3);
+
+
